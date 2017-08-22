@@ -26,9 +26,13 @@
 
 	<body class="theme-base-0d">
 		{% include 'sidebar.html' %}
-		<div class="content container">
-			{% block content %}
-			{% endblock %}
-		</div>
+        {% if BACKGROUND_IMAGER %}
+            <div class="content container" style="background-image: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }});">
+        {% else %}
+		    <div class="content container">
+        {% endif %}
+			    {% block content %}
+			    {% endblock %}
+		    </div>
 	</body>
 </html>
