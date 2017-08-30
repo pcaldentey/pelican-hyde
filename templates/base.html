@@ -27,14 +27,14 @@
 
 	<body class="theme-base-0d">
 		{% include 'sidebar.html' %}
-<nav>
-      <a href="https://blog.alexandrevicenzi.com">Home</a> |
-      <a href="/archives.html">Archives</a> |
-      <a href="/categories.html">Categories</a> |
-      <a href="/tags.html">Tags</a> |
-      <a href="https://blog.alexandrevicenzi.com/feeds/all.atom.xml">Atom</a>
-
-    </nav>
+        {% if NAVLINKS %}
+            <nav>
+    	        {% for name, link in NAVLINKS %}
+                    <a href="{{ link }}">{{ name }}</a> 
+                    {% if not loop.last %} |{% endif %}
+			    {% endfor %}
+            </nav>
+        {% endif %}
 
         {% if BACKGROUND_IMAGE %}
             <div class="content container" style="background: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }}) no-repeat; background-size: contain;">
