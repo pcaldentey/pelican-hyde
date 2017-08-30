@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/poole.css" />
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/hyde.css" />
+		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/new.css" />
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/syntax.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -26,8 +27,17 @@
 
 	<body class="theme-base-0d">
 		{% include 'sidebar.html' %}
-        {% if BACKGROUND_IMAGER %}
-            <div class="content container" style="background-image: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }});">
+<nav>
+      <a href="https://blog.alexandrevicenzi.com">Home</a> |
+      <a href="/archives.html">Archives</a> |
+      <a href="/categories.html">Categories</a> |
+      <a href="/tags.html">Tags</a> |
+      <a href="https://blog.alexandrevicenzi.com/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+        {% if BACKGROUND_IMAGE %}
+            <div class="content container" style="background: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }}) no-repeat; background-size: contain;">
         {% else %}
 		    <div class="content container">
         {% endif %}
