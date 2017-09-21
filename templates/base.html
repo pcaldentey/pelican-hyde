@@ -39,6 +39,9 @@
 
         {% if BACKGROUND_IMAGE %}
             <div class="content container" style="background: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }}) no-repeat; background-size: contain;">
+
+			    {% block content_title %}
+			    {% endblock %}
         {% else %}
 		    <div class="content container">
         {% endif %}
