@@ -8,7 +8,8 @@
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-		<title>{% block title %}{{ SITENAME }}{% endblock title %}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}</title>
+        {% block metas %}{% endblock %}
+		<title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>
 
 		<!-- CSS -->
 		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
@@ -40,8 +41,7 @@
         {% if BACKGROUND_IMAGE %}
             <div class="content container" style="background: url({{ SITEURL }}/images/{{ BACKGROUND_IMAGE }}) no-repeat; background-size: contain;">
 
-			    {% block content_title %}
-			    {% endblock %}
+			    {% block content_title %}{% endblock %}
         {% else %}
 		    <div class="content container">
         {% endif %}

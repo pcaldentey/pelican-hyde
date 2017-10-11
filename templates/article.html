@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block meta %}
+<meta name="description" content="{{ article.metadesc }}" />
+<meta name="keywords" content="{{ article.metakeywords }}" />
+{% endblock %}
+{% block title %}
+{{ SITENAME }} - {{ article.title  }}
+{% endblock %}
+
 {% block content %}
 <div class="post">
 	<h1 class="post-title">{{ article.title }}</h1>
