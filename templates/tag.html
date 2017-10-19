@@ -1,5 +1,10 @@
 {% extends "index.html" %}
 
+{% block meta %}
+<meta name="description" content="artículos de p.caldentey.org - {{ tag }}" />
+<meta name="keywords" content="{{ tag }}" />
+{% endblock %}
+
 {% block title %}{{ SITENAME }} - {{tag}} {% endblock %}
 {% block content_title %}
 <h2>Tag: {{ tag }}</h2>

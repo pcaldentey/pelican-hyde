@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block meta %}
+<meta name="description" content="{{ INDEX_META_DESC }}" />
+<meta name="keywords" content="{{ INDEX_META_KEY }}" />
+{% endblock %}
+
 {% block content %}
 	<div class="posts">
 		{% for article in articles_page.object_list %}
@@ -11,7 +16,7 @@
 				<p>
 					{{ article.summary }}
 				</p>
-				<a class="read-more" href="{{ article.url }}">Seguir leyendo »</a>
+                <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Seguir leyendo »</a>
 			</div>
 		{% endfor %}
 	</div>

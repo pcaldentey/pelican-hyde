@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block meta %}
+<meta name="description" content="Tags/Categorías de p.caldentey.org " />
+<meta name="keywords" content="{%- for tag, articles in tags|sort %} {{ tag }} {% endfor %}" />
+{% endblock %}
+
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
 {% block content %}
