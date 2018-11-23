@@ -1,4 +1,4 @@
-.highlight pre span, .highlight pre, .linenodiv pre { font-size: 14px; }
+.highlight pre span, .highlight pre, .linenodiv pre { font-size: 12px; }
 .highlight .hll { background-color: #ffc; }
 .highlight .c { color: #999; } /* Comment */
 .highlight .err { color: #a00; background-color: #faa } /* Error */
@@ -72,4 +72,4 @@
 .highlighttable pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
 .highlighttable td.code { border-left:none; }
 td.code div.highlight pre { padding-left:0; }
-.linenodiv pre {padding-right:0 }
+.linenodiv pre {padding-right:0; word-wrap: normal; }
